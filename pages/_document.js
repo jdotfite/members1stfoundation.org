@@ -1,18 +1,44 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-export default function Document() {
+export default class CustomDocument extends Document {
+  render() {
     return (
-        <Html>
-            <Head>
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap"
-                    rel="stylesheet"
-                />
-            </Head>
-            <body>
-                <Main />
-                <NextScript />
-            </body>
-        </Html>
-    )
+      <Html>
+        <Head>
+            {/* Preconnect links for Google Fonts */}
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+
+            {/* Font - Open Sans */}
+            <link
+                href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" 
+                rel="stylesheet"
+            />
+            {/* Font - Din 2014 */}
+            <link href="https://use.typekit.net/xex4owo.css" 
+            rel="stylesheet" />
+
+          {/* Light/Dark Theme Switch */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function() {
+                  const localStorageTheme = localStorage.getItem('color-theme');
+                  if (localStorageTheme === 'dark' || (!localStorageTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                })();
+              `,
+            }}
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }

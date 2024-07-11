@@ -1,0 +1,306 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  .light {
+    --font-primary: 'Open Sans';
+    --font-secondary: 'din-2014';
+
+    --text-primary: blue;
+
+    --color-brand-red: #dc3737;
+
+    --color-brand-yellow: #FFD369;
+    --color-a-default: var(--color-primary-background-hover);
+    --color-a-hover: var(--color-primary-background-hover);
+    --color-a-visited: var(--color-primary-background-hover);
+
+    --color-tone-1: #1a1a1b;
+    --color-tone-2: #333333;
+    --color-tone-3: #717171;
+    --color-tone-4: #d3d6da;
+    --color-tone-5: #f7f7f7;
+    --color-tone-6: #fbfbfb;
+    --color-tone-7: #ffffff;
+
+    --color-global-white: #ffffff;
+    --color-primary: #000;
+    --color-primary-hover: #fff;
+    --color-primary-visited: #8700B5;
+    --color-primary-border: #000;
+    --color-primary-border-hover: #000;
+
+    --color-btn-outline-text: var(--color-tone-2);
+    --color-btn-outline-text-hover: var(--color-tone-7);
+    --color-btn-outline-primary-border: #000;
+    --color-btn-outline-primary-border-hover: #000;
+    --color-btn-outline-primary-background: transparent;
+    --color-btn-outline-primary-background-hover: black;
+
+    --color-primary-background: transparent;
+    --color-primary-background-hover: black;
+    --color-primary-background-selected: #00255D;
+
+    --color-primary-onBackground: #fff;
+    --color-primary-onBackground-hover: #000;
+    --color-primary-onBackground-background: transparent;
+    --color-primary-onBackground-background-hover: #ffffff;
+    --color-primary-onBackground-border: #ffffff;
+    --color-primary-onBackground-border-hover: #222;
+    --color-primary-border-hover: #000;
+    --color-primary-onBackground-selected: #ffffff;
+
+    --color-secondary: #0F1A1C;
+    --color-secondary-hover: #000000;
+    --color-secondary-weak: #576F76;
+    --color-secondary-onBackground: #000000;
+    --color-secondary-background: #EAEDEF;
+    --color-secondary-background-hover: #E2E7E9;
+    --color-secondary-background-selected: #D2DADD;
+    --color-secondary-plain: #0F1A1C;
+    --color-secondary-plain-hover: #000000;
+
+    --input-border: var(--color-primary);
+  }
+
+  .dark {
+    --text-primary: green;
+    --color-global-white: #ffffff;
+    --color-a-default: ##ed7e7e;
+    --color-primary: #ffffff;
+
+    --color-brand-yellow: #7e5900;
+
+    --color-tone-1: #f1f2f2;
+    --color-tone-2: #e5e5e5;
+    --color-tone-3: #848484;
+    --color-tone-4: #302f2f;
+    --color-tone-5: #181818;
+    --color-tone-6: #141414;
+    --color-tone-7: #0d0d0d;
+
+    --color-primary-hover: #fff;
+    --color-primary-background: #dc3737;
+    --color-primary-background-hover: #bf2b2b;
+    --color-primary-border: #dc3737;
+    --color-primary-border-hover: var(--color-primary-background-hover);
+    --color-primary-background-selected: #ed7e7e;
+
+    --color-btn-outline-text: var(--color-tone-2);
+    --color-btn-outline-text-hover: var(--color-tone-7);
+    --color-btn-outline-primary-border: #ddd;
+    --color-btn-outline-primary-border-hover: var(--color-btn-outline-primary-border);
+    --color-btn-outline-primary-background: transparent;
+    --color-btn-outline-primary-background-hover: var(--color-btn-outline-primary-border);
+
+    --color-a-default: var(--color-primary-background-hover);
+
+    --color-primary-onBackground: #fff;
+    --color-primary-onBackground-hover: #000;
+    --color-primary-onBackground-background: transparent;
+    --color-primary-onBackground-background-hover: #ffffff;
+    --color-primary-onBackground-border: #ffffff;
+    --color-primary-onBackground-border-hover: #222;
+
+    --color-secondary: #f3f3f3;
+    --color-secondary-weak: #919191;
+    --color-secondary-background: #252525;
+    --color-secondary-background-hover: #2f2f2f;
+    --color-secondary-background-selected: #424242;
+    --color-secondary-plain: #f3f3f3;
+
+    --input-border: var(--color-primary);
+  }
+}
+
+@layer utilities {
+  .dim-bg {
+    filter: brightness(80%);
+  }
+}
+
+@layer components {
+  :root {
+    color: var(--color-tone-2);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-primary);
+  }
+  h2,h3,h4,h5,h6 {
+    color: var(--color-tone-1);
+    font-family: var(--font-secondary);
+  }
+  input {
+    @apply px-4 py-2;
+    border: 1px solid var(--input-border);
+  }
+  .svg-converted {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .bg-alternate:nth-child(even) {
+    background-color: var(--color-tone-5);
+    /* Darker tone for even elements */
+  }
+  .bg-alternate:nth-child(odd) {
+    background-color: var(--color-tone-7);
+  }
+
+  /* Base styling for  btns */
+  .btn {
+    @apply font-semibold uppercase text-sm text-center;
+    @apply px-4 py-2 inline-block;
+    @apply transition duration-150 ease-in-out;
+    transition: color .15s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+  }
+  .btn-lg {
+    @apply px-8 py-3;
+  }
+  .btn-md {
+    @apply px-8 py-3;
+  }
+
+  @media (min-width: 768px) {
+    .btn-lg {
+      @apply px-10 py-4.5;
+    } 
+    .btn-md {
+      @apply px-8 py-3;
+    }
+  }
+
+  /* Primary btn */
+  .btn-primary {
+    @apply border-2;
+    color: var(--color-primary);
+    background-color: var(--color-primary-background);
+    border-color: var(--color-primary-border);
+  }
+  /* Primary btn - Hover state */
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:active {
+    background-color: var(--color-primary-background-hover);
+    color: var(--color-primary-hover);
+    border-color: var(--color-primary-border-hover);
+  }
+
+  .btn-outline {
+    @apply border-2 border-solid;
+    background: var(--color-btn-outline-primary-background);
+    border-color: var(--color-btn-outline-primary-border);
+  }
+
+  .btn-outline:hover,
+  .btn-outline:focus,
+  .btn-outline:active {
+    @apply border-2;
+    color: var(--color-btn-outline-text-hover);
+    background-color: var(--color-btn-outline-primary-background-hover);
+    border-color: var(--color-btn-outline-primary-border-hover);
+  }
+
+  /* Primary btn onBackground */
+  .btn-primary-onBackground {
+    @apply border-2;
+    color: var(--color-primary-onBackground);
+    background: var(--color-primary-onBackground-background);
+    border-color: var(--color-primary-onBackground-border);
+  }
+  /* Primary btn onBackground - Hover state */
+  .btn-primary-onBackground:hover,
+  .btn-primary-onBackground:focus,
+  .btn-primary-onBackground:active {
+    color: var(--color-primary-onBackground-hover);
+    background: var(--color-primary-onBackground-background-hover);
+  }
+  p {
+    @apply text-lg;
+  }
+  .section-py {
+    @apply py-10 sm:py-11 md:py-12 lg:py-14 xl:py-16;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.btn-ripple {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+}
+.btn-ripple::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  height: 100%;
+  width: 50%;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all ease-in-out 1s;
+  transform: scale(5, 5);
+}
+.btn-ripple:active::after {
+  padding: 0;
+  margin: 0;
+  opacity: 0.2;
+  transition: 0s;
+  transform: scale(0, 0);
+}
+.a {
+  color: var(--color-a-default);
+}
+.a:hover {
+  color: var(--color-a-hover)
+}
+.a.visited:not(.no-visited),
+.a:visited:not(.no-visited) {
+  color: var(--color-a-visited)
+}
+.svg-converted * {
+  fill: #a6211b !important;
+}
+.dark .svg-converted * {
+  fill: #ab7df8  !important;
+}
+.swiper-pagination-bullet-active:is(.dark *) {
+  background-color:#888888;
+  /* Dark mode color */
+}
+.swiper-pagination-bullet {
+  background-color:#a6211b;
+  /* Default color */
+
+}
+.swiper-pagination-bullet-active {
+  @apply w-4;
+  @apply rounded-full;
+
+}
+.scroll_link {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  left: 50%;
+  width: 250px;
+  margin-left: -125px;
+  bottom: 0;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  height: 60px;
+  color: #fff;
+}

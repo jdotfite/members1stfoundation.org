@@ -1,19 +1,16 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-
 import camelcaseKeys from 'camelcase-keys';
-
-import { getLandingPage, getLandingPages, getPostsData } from '@/lib/api'
-
-import LandingPageSection from '@/components/landing-page-sections/landing-page-section'
+import { getLandingPage, getLandingPages, getPostsData } from '@/lib/api';
+import LandingPageSection from '@/components/landing-page-sections/landing-page-section';
 import Blog from "@/components/blog/blog";
 import Preloader from '@/components/preloader';
 
 export default function LandingPage({ page, blogPosts }) {
   const router = useRouter();
   if (router.isFallback) {
-    return <Preloader />
+    return <Preloader />;
   }
 
   if (!page) {
@@ -40,26 +37,26 @@ export default function LandingPage({ page, blogPosts }) {
       )}
       <Blog posts={blogPosts} />
     </>
-  )
+  );
 }
 
 export async function getStaticProps({ params }) {
   try {
     const page = await getLandingPage(params.slug);
-    const blogPosts = (await getPostsData({page: 1, pageSize: 2})).posts
+    const blogPosts = (await getPostsData({page: 1, pageSize: 2})).posts;
 
     return { props: { page: camelcaseKeys(page), blogPosts: camelcaseKeys(blogPosts) } };
   } catch (e) {
-    console.error(`Couldn't load content for Landing page ${params.slug}.`, e)
+    console.error(`Couldn't load content for Landing page ${params.slug}.`, e);
 
     return {
       notFound: true
-    }
+    };
   }
 }
 
 export async function getStaticPaths() {
-  const butterToken = process.env.NEXT_PUBLIC_BUTTER_CMS_API_KEY
+  const butterToken = process.env.NEXT_PUBLIC_BUTTER_CMS_API_KEY;
 
   if (butterToken) {
     try {
@@ -70,7 +67,7 @@ export async function getStaticPaths() {
         fallback: true,
       };
     } catch (e) {
-      console.error("Couldn't load content for Landing pages.", e)
+      console.error("Couldn't load content for Landing pages.", e);
     }
 
     return {
