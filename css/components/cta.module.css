@@ -1,0 +1,17 @@
+.ctaSwiper :global(.swiper-pagination-bullet-active:is(.dark *)) {
+    background-color: #888888;
+    /* Dark mode color */
+  }
+  
+  .ctaSwiper :global(.swiper-pagination-bullet) {
+    background-color: #a6211b;
+    /* Default color */
+  }
+  
+  .ctaSwiper :global(.swiper-pagination-bullet-active) {
+    @apply w-4 rounded-full;
+  }
+  
+  .ctaSwiper :global(.swiper-wrapper) {
+    padding-bottom: 35px;
+  }

@@ -4,9 +4,6 @@ import Preloader from '@/components/preloader';
 import MissingSection from './missing-section';
 
 export default function LandingPageSection({ type, sectionData }) {
-  console.log('LandingPageSection type:', type);
-  console.log('Section Data:', sectionData);
-
   const sectionsComponentPaths = () => ({
     hero: dynamic(
       () => import('@/components/landing-page-sections/hero').catch(() => MissingSection), {
