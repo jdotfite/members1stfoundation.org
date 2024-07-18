@@ -1,7 +1,9 @@
 import React from "react";
 
-export default function Hero({ preHeadline, headline, subheadline, image, buttonLabel, buttonUrl, scrollAnchorId }) {
-  return (
+export default function Hero({ preHeadline, headline, subheadline, image, buttonLabel, buttonUrl, section_id }) {
+  console.log('Hero component - section_id:', section_id);
+    return (
+    <section id={section_id} >
     <div className="relative h-screen w-full flex items-center justify-center text-center bg-cover bg-center"
          style={{
            backgroundImage: image ? `url(${image})` : 'none',
@@ -36,5 +38,6 @@ export default function Hero({ preHeadline, headline, subheadline, image, button
         </div>
       </main>
     </div>
+    </section>
   );
 }

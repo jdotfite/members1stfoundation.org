@@ -3,15 +3,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import styles from '../../css/components/cta.module.css';
+import InlineSVG from '../utils/InlineSVG';
 
-const CTA = ({ heading, paragraph, icon_and_title }) => {
+const IconsSwiper = ({ headline, paragraph, icon_and_title }) => {
   return (
-    <section className="section-py bg-alternate" id="cta">
+    <section className="section-py bg-alternate" id="icons-swiper">
       <div className="container">
-        <h2 className="text-5xl font-bold uppercase mb-6 tracking-tight text-center">{heading}</h2>
+        <h2 className="text-5xl font-bold uppercase mb-6 tracking-tight text-center">{headline}</h2>
         <div className="mx-auto max-w-6xl">
-          <p className="text-center mb-4">{paragraph}</p>
+          <p className="text-center mb-5">{paragraph}</p>
         </div>
         {icon_and_title && icon_and_title.length > 0 && (
           <div className="swiper pt-4 pb-3">
@@ -29,12 +29,12 @@ const CTA = ({ heading, paragraph, icon_and_title }) => {
               pagination={{
                 clickable: true,
               }}
-              className={styles.ctaSwiper}
+             
             >
               {icon_and_title.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div className="card card-body card-hover border-0 text-center mx-2">
-                    <img 
+                    <InlineSVG   
                       alt={item.icon_title} 
                       className="d-block mx-auto mb-3 svg-convert" 
                       src={item.icon} 
@@ -52,4 +52,4 @@ const CTA = ({ heading, paragraph, icon_and_title }) => {
   );
 };
 
-export default CTA;
+export default IconsSwiper;

@@ -275,22 +275,9 @@
   fill: #a6211b !important;
 }
 .dark .svg-converted * {
-  fill: #ab7df8  !important;
+  fill: #9c4542  !important;
 }
-.swiper-pagination-bullet-active:is(.dark *) {
-  background-color:#888888;
-  /* Dark mode color */
-}
-.swiper-pagination-bullet {
-  background-color:#a6211b;
-  /* Default color */
 
-}
-.swiper-pagination-bullet-active {
-  @apply w-4;
-  @apply rounded-full;
-
-}
 .scroll_link {
   display: flex;
   position: absolute;
@@ -303,4 +290,20 @@
   padding-top: 20px;
   height: 60px;
   color: #fff;
+}
+.swiper-pagination-horizontal .swiper-pagination-bullet-active:is(.dark *) {
+	background-color:#888888;
+	/* Dark mode color */
+}
+.swiper-pagination-horizontal .swiper-pagination-bullet {
+	background-color:#a6211b;
+	/* Default color */
+
+}
+.swiper-pagination-horizontal .swiper-pagination-bullet-active {
+	@apply w-4;
+	@apply rounded-full;
+}
+.swiper-wrapper {
+    @apply pb-9;
 }
