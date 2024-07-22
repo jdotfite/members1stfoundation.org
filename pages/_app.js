@@ -15,6 +15,9 @@ import GlobalScripts from "../scripts/GlobalScripts";
 import "@/css/lineicons.css";
 import "@/css/tiny-slider.min.css";
 /*import "@/css/main.css";*/
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import "@/css/globals.css";
 
 function MyApp({ Component, pageProps, mainMenu }) {

@@ -1,9 +1,9 @@
 import React from 'react';
 import InlineSVG from '../utils/InlineSVG';
 
-export default function Timeline({ headline, columns, paragraph, cta_text, cta_url }) {
+export default function Timeline({ headline, columns, paragraph, cta_text, cta_url, section_id }) {
   return (
-    <section className="section-py bg-alternate">
+    <section className="section-py bg-alternate" id={section_id}>
       <div className="container">
         <h2 className="text-5xl font-bold uppercase mb-6 tracking-tight text-center">{headline}</h2>
         <ol className="items-center lg:flex py-0 lg:py-10">

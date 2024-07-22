@@ -11,7 +11,8 @@ const TwoColumnSection = ({
   media, 
   media_alt_text,
   media_position,
-  background_color
+  background_color,
+  section_id
 }) => {
   const mediaComponent = (
     <div className="mt-8 md:mt-0">
@@ -47,7 +48,7 @@ const TwoColumnSection = ({
   );
 
   return (
-    <section className={`section-py ${background_color}`}>
+    <section className={`section-py ${background_color}`} id={section_id}>
       <div className="container">
         <div className={`grid md:grid-cols-2 gap-10 items-center ${media_position === 'left' ? 'md:flex-row-reverse' : ''}`}>
           {media_position === 'left' ? (

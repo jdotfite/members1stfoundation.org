@@ -1,13 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
 import InlineSVG from '../utils/InlineSVG';
 
-const IconsSwiper = ({ headline, paragraph, icon_and_title }) => {
+const IconsSwiper = ({ headline, paragraph, icon_and_title, section_id }) => {
   return (
-    <section className="section-py bg-alternate" id="icons-swiper">
+    <section className="section-py bg-alternate" id={section_id}>
       <div className="container">
         <h2 className="text-5xl font-bold uppercase mb-6 tracking-tight text-center">{headline}</h2>
         <div className="mx-auto max-w-6xl">

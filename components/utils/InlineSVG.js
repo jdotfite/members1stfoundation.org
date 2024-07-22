@@ -46,7 +46,7 @@ const InlineSVG = memo(({ src, width, className, ...props }) => {
 
   if (!svgContent) {
     // While loading or if there's an error, render the original img
-    return <Image src={src} width={width} className={className} alt="" {...props} />;
+    return <Image src={src} width={width} height={width} layout="responsive" className={className} alt="" {...props} />;
   }
 
   // Render the SVG inline
