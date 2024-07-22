@@ -12,8 +12,9 @@
     --text-primary: blue;
 
     --color-brand-red: #dc3737;
-
     --color-brand-yellow: #FFD369;
+    --color-brand-dark-blue: #191c84;
+    
     --color-a-default: var(--color-primary-background-hover);
     --color-a-hover: var(--color-primary-background-hover);
     --color-a-visited: var(--color-primary-background-hover);

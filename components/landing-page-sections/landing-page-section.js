@@ -32,6 +32,14 @@ const sectionsComponentPaths = {
     () => import('@/components/landing-page-sections/cards-swiper').catch(() => MissingSection),
     { loading: Preloader }
   ),
+  'timeline': dynamic(
+    () => import('@/components/landing-page-sections/timeline').catch(() => MissingSection),
+    { loading: Preloader }
+  ),
+  'two-columns': dynamic(
+    () => import('@/components/landing-page-sections/two-columns').catch(() => MissingSection),
+    { loading: Preloader }
+  ),
 };
 
 export default function LandingPageSection({ type, sectionData }) {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, memo } from 'react';
+import Image from 'next/image';
 
 const InlineSVG = memo(({ src, width, className, ...props }) => {
   const [svgContent, setSvgContent] = useState('');
@@ -45,11 +46,13 @@ const InlineSVG = memo(({ src, width, className, ...props }) => {
 
   if (!svgContent) {
     // While loading or if there's an error, render the original img
-    return <img src={src} width={width} className={className} {...props} />;
+    return <Image src={src} width={width} className={className} alt="" {...props} />;
   }
 
   // Render the SVG inline
   return <span dangerouslySetInnerHTML={{ __html: svgContent }} {...props} />;
 });
+
+InlineSVG.displayName = 'InlineSVG';
 
 export default InlineSVG;

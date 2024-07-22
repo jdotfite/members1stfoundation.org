@@ -14,7 +14,7 @@ import GlobalScripts from "../scripts/GlobalScripts";
 
 import "@/css/lineicons.css";
 import "@/css/tiny-slider.min.css";
-import "@/css/main.css";
+/*import "@/css/main.css";*/
 import "@/css/globals.css";
 
 function MyApp({ Component, pageProps, mainMenu }) {

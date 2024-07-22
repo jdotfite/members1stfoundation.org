@@ -31,6 +31,10 @@ module.exports = {
         '4.5xl': '2.5rem' // Example size, adjust as needed
       },
       colors: {
+        'brand-yellow': 'var(--color-brand-yellow)',
+        'brand-red': 'var(--color-brand-red)',
+        'brand-dark-blue': 'var(--color-brand-dark-blue)',
+
         'text-primary': 'var(--text-primary)',
         'color-global-white': 'var(--color-global-white)',
 
@@ -93,4 +97,10 @@ module.exports = {
     },
   },
   plugins: [],
+  safelist: [
+    {
+      pattern: /^(bg|text|border)-brand-/, // This will include all bg-brand-* and text-brand-* classes
+      variants: ['hover', 'focus', 'active'], // Include variants if needed
+    },
+  ],
 }

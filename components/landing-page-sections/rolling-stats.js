@@ -6,6 +6,7 @@ const RollingStats = ({ headline, paragraph, section_id, stats = [] }) => {
   const statsRef = useRef(null);
 
   useEffect(() => {
+    const currentStatsRef = statsRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -15,14 +16,14 @@ const RollingStats = ({ headline, paragraph, section_id, stats = [] }) => {
       },
       { threshold: 0.1 }
     );
-
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
+  
+    if (currentStatsRef) {
+      observer.observe(currentStatsRef);
     }
-
+  
     return () => {
-      if (statsRef.current) {
-        observer.unobserve(statsRef.current);
+      if (currentStatsRef) {
+        observer.unobserve(currentStatsRef);
       }
     };
   }, []);
