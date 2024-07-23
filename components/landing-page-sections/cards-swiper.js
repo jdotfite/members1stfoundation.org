@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
-import InlineSVG from '../utils/InlineSVG';
+import InlineSVG from '../../utils/InlineSVG';
 
 const CardsSwiper = ({ headline, paragraph, cards }) => {
   const prevRef = useRef(null);
@@ -29,7 +29,7 @@ const CardsSwiper = ({ headline, paragraph, cards }) => {
                 swiper.params.navigation.nextEl = nextRef.current;
               }}
               watchOverflow={true}
-              spaceBetween={30}
+              spaceBetween={20}
               slidesPerView={1}
               breakpoints={{
                 480: { slidesPerView: 1 },
@@ -46,16 +46,16 @@ const CardsSwiper = ({ headline, paragraph, cards }) => {
             >
               {cards.map((card, index) => (
                 <SwiperSlide key={index} className="h-auto">
-                  <div className="h-full w-full p-6 bg-color-tone-6 rounded overflow-hidden shadow-md flex flex-col dark:shadow-md">
+                  <div className="h-full w-full bg-color-tone-6 p-8 rounded-2xl border border-white/[0.08] overflow-hidden shadow-md flex flex-col dark:shadow-md">
                     <InlineSVG
                       src={card.icon}
                       alt="Icon"
                       width={92}
                       height={92}
-                      className="mx-auto mb-2 svg-convert"
+                      className="mx-auto mb-5 svg-convert"
                     />
                     <div className="flex flex-col flex-grow">
-                      <h3 className="font-bold text-3xl mb-5 uppercase text-center">{card.headline}</h3>
+                      <h3 className="font-bold text-3xl mb-3 uppercase text-center">{card.headline}</h3>
                       <p className="text-base flex-grow mb-10">{card.paragraph}</p>
                       <a className={`btn btn-md btn-${card.button_style} mx-auto`} href={card.button_url}>
                         {card.button_text}

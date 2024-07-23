@@ -12,6 +12,7 @@
     "buttercms": "^1.2.15",
     "camelcase-keys": "^8.0.2",
     "date-fns": "^2.29.3",
+    "framer-motion": "^11.3.8",
     "next": "^13.1.5",
     "path": "^0.12.7",
     "react": "^18.2.0",

@@ -1,5 +1,5 @@
 import React from 'react';
-import InlineSVG from '../utils/InlineSVG';
+import InlineSVG from '../../utils/InlineSVG';
 
 export default function Timeline({ headline, columns, paragraph, cta_text, cta_url, section_id }) {
   return (

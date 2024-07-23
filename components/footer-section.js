@@ -24,22 +24,22 @@ export default function FooterSection({ mainMenu }) {
                         </div>
                     </div>
                     <div>
-                        <p className="font-semibold dark:text-white">Learn More</p>
+                        <p className="font-semibold text-gray-800 transition-colors duration-300 dark:text-gray-200">Learn More</p>
                         <div className="flex flex-col items-start mt-5 space-y-2">
                             {links.map((link) => (
-                                <Link key={link.url} href={link.url} className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
+                                <Link key={link.url} href={link.url} className="text-gray-600 transition-colors duration-300 dark:text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
                                     {link.label}
                                 </Link>
                             ))}
                         </div>
                     </div>
                     <div>
-                        <p className="font-semibold">Make a Difference</p>
+                        <p className="font-semibold text-gray-800 transition-colors duration-300 dark:text-gray-200">Make a Difference</p>
                         <div className="flex flex-col items-start mt-5 space-y-2">
-                            <Link href="/donate" className="transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
+                            <Link href="/donate" className="text-gray-600 transition-colors duration-300 dark:text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
                                 Donate
                             </Link>
-                            <Link href="/contact" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
+                            <Link href="/contact" className="text-gray-600 transition-colors duration-300 dark:text-gray-400 dark:hover:text-blue-400 hover:underline hover:text-blue-500">
                                 Contact Us
                             </Link>
                         </div>

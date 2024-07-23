@@ -33,7 +33,7 @@ const RollingStats = ({ headline, paragraph, section_id, stats = [] }) => {
       <div className="container">
         <h2 className="text-5xl font-bold uppercase mb-6 tracking-tight text-center">{headline}</h2>
         <div className="mx-auto max-w-6xl">
-          <p className="text-center mb-4">{paragraph}</p>
+          <p className="text-center mb-5">{paragraph}</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
           {stats && stats.length > 0 ? (

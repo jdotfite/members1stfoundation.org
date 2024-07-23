@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import InlineSVG from '../utils/InlineSVG';
+import InlineSVG from '../../utils/InlineSVG';
 
 const IconsSwiper = ({ headline, paragraph, icon_and_title, section_id }) => {
   return (

@@ -13,7 +13,7 @@
 
     /* Brand Colors */
     --color-brand-red: #dc3737;
-    --color-brand-yellow: #FFD369;
+    --color-brand-yellow: #fee3a3;
     --color-brand-dark-blue: #191c84;
 
     /* Tones */
@@ -79,7 +79,7 @@
     --color-a-default: ##ed7e7e;
     --color-primary: #ffffff;
 
-    --color-brand-yellow: #7e5900;
+    --color-brand-yellow: #5c4c1e;
 
     --color-tone-1: #f1f2f2;
     --color-tone-2: #e5e5e5;
@@ -122,6 +122,9 @@
     --input-border: var(--color-primary);
 
     --swiper-theme-color: #888888;
+
+
+    
     
   }
 }
@@ -345,7 +348,7 @@
 .scroll-top {
   width: 45px;
   height: 45px;
-  background: #37C2CC;
+  background: var(--color-tone-3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -366,6 +369,62 @@
 
 .scroll-top:hover {
   color: #fff;
-  background: rgba(55, 194, 204, 0.8);
+  background: var(--color-tone-4);
 }
 
+
+/* Dark theme scrollbar */
+@media (prefers-color-scheme: dark) {
+  /* For Webkit browsers (Chrome, Safari) */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-tone-6);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-tone-3);
+    border-radius: 6px;
+    border: 3px solid var(--color-tone-6);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-tone-2);
+  }
+
+  /* For Firefox */
+  * {
+   
+    scrollbar-color: var(--color-tone-3) var(--color-tone-6);
+  }
+}
+
+/* Light theme scrollbar */
+@media (prefers-color-scheme: light) {
+  /* For Webkit browsers (Chrome, Safari) */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-tone-5);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-tone-4);
+    border-radius: 6px;
+    border: 3px solid var(--color-tone-5);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-tone-2);
+  }
+
+  /* For Firefox */
+  * {
+   
+    scrollbar-color: var(--color-tone-3) var(--color-tone-4);
+  }
+}
