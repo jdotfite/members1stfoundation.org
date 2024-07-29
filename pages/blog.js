@@ -1,16 +1,17 @@
 import Link from "next/link";
-
 import camelcaseKeys from 'camelcase-keys';
 
 import PostsList from "@/components/blog/posts-list";
-
 import { getPostsData, getCategories } from '@/lib/api'
 import CategoriesWidget from "@/components/blog/categories-widget";
 import SearchWidget from "@/components/blog/search-widget";
+import FinancialSection from "@/components/blog/FinancialSection"; // Import from the new file
 
 export default function Blog({ posts, categories }) {
   return (
     <>
+      <FinancialSection />
+      
       <section id="blog-roll" className="blog-roll-nav">
         <div className="container">
           <div className="row justify-content-center">

@@ -14,7 +14,7 @@
     /* Brand Colors */
     --color-brand-red: #dc3737;
     --color-brand-yellow: #fee3a3;
-    --color-brand-dark-blue: #191c84;
+    --color-brand-dark-blue: #213d70;
 
     /* Tones */
     --color-tone-1: #1a1a1b;
@@ -149,9 +149,8 @@
     color: var(--color-tone-1);
     font-family: var(--font-secondary);
   }
-  input {
-    @apply px-4 py-2;
-    border: 1px solid var(--input-border);
+  input, select {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
   }
   .svg-converted {
     width: auto;
@@ -427,4 +426,16 @@
    
     scrollbar-color: var(--color-tone-3) var(--color-tone-4);
   }
+}
+
+
+.single-post-thumbnail {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  width: 100%;
+  margin-top: 15px;
+  /* changes for Image tag */
+  height: 300px;
+  /* end of changes for Image tag */
 }

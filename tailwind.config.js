@@ -14,12 +14,20 @@ module.exports = {
         sm: '1.5rem',        // Padding for sm breakpoints
         md: '2rem',          // Padding for md breakpoints
         lg: '2.5rem',        // Padding for lg breakpoints
-        xl: '3rem',          // Padding for xl breakpoints
+        xl: '3rem'           // Padding for xl breakpoints
       }
     },
     extend: {
       spacing: {
-        '4.5': '1.125rem' // Assuming 1 rem is 16px, 1.125 rem would be 18px
+        '4.5': '1.125rem', // Assuming 1 rem is 16px, 1.125 rem would be 18px
+        '13': '3.25rem',
+        '14': '3.5rem',
+        '15': '3.75rem',
+        '16': '4rem',
+        '17': '4.25rem',
+        '18': '4.5rem',
+        '19': '4.75rem',
+        '20': '5rem'
       },
       fontFamily: {
         'primary': ['var(--font-primary)', 'sans-serif'],
@@ -98,8 +106,9 @@ module.exports = {
   },
   plugins: [],
   safelist: [
+    'mt-19', // Include specific mt class
     {
-      pattern: /^(bg|text|border)-brand-/, // This will include all bg-brand-* and text-brand-* classes
+      pattern: /^(bg|text|border)-brand-/, // Include all bg-brand-* and text-brand-* classes
       variants: ['hover', 'focus', 'active'], // Include variants if needed
     },
   ],

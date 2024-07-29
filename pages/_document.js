@@ -34,7 +34,7 @@ export default class CustomDocument extends Document {
             }}
           />
         </Head>
-        <body>
+        <body class="mt-20">
           <Main />
           <NextScript />
         </body>
