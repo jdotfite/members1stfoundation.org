@@ -40,7 +40,7 @@ const RollingStats = ({ headline, paragraph, section_id, stats = [] }) => {
             stats.map((stat, index) => (
               <div key={index} className="col-block stats__col px-2 mb-4 sm:mb-4 md:mb-0">
                 <h3 className="font-semibold mb-3">{stat.label}
-                  <div className="stats__count statistic text-4xl font-bold uppercase mb-2 tracking-tight text-center text-color-brand-red">
+                  <div className="stats__count statistic text-4.5xl font-bold uppercase mb-2 tracking-tight text-center text-color-brand-red">
                     {stat.prefix || ''}
                     <CountUp
                       start={0}

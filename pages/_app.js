@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import Router from "next/router";
 import App from "next/app";
 import Head from "next/head";
+if (process.env.NODE_ENV !== 'production') {
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+}
+
 import { useRouter } from "next/router";
 
 import { getMainMenu } from "@/lib/api";
