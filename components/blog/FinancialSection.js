@@ -58,7 +58,7 @@ const FinancialSection = () => {
         </div>
         <div className="hidden lg:block lg:col-span-5">
           <div className="bg-white text-gray-800 p-6 shadow-lg -mb-24 lg:w-11/12">
-            <h2 className="text-2xl font-bold mb-4">Ready to turn the tables on money? Let's get started.</h2>
+			<h2 className="text-2xl font-bold mb-4">Ready to turn the tables on money? Let&apos;s get started.</h2>
             <p className="mb-6">Get the best content for you by answering these two simple questions.</p>
             <form>
               <div className="mb-4">
@@ -94,7 +94,7 @@ const FinancialSection = () => {
                 type="submit"
                 className="w-full bg-black text-white py-2 px-4 hover:bg-gray-800 transition duration-300"
               >
-                Let's go!
+                Let&apos;s go!
               </button>
             </form>
           </div>
